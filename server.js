@@ -23,6 +23,6 @@ app.use(function(req,res,next){
 });
 
 //base url
-const URL_BASE = '/api/v1';
+const URL_BASE = '/api/v2';
 app.use(URL_BASE+'/products',products);
 module.exports = app;
