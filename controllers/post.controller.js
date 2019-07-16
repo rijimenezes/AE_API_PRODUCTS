@@ -1,6 +1,6 @@
 
 let _post;
-const cretePost = (req,res)=>{
+const createPost = (req,res)=>{
     const post = req.body;
     _post.create(post)
         .then((data)=>{
@@ -94,7 +94,7 @@ const deleteProduct = (req,res)=>{
 module.exports = (User)=>{
     _post = User;
     return ({
-        cretePost,
+        createPost,
         findAll
             // ,
             // findById,
