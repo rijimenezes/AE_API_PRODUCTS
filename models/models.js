@@ -9,8 +9,10 @@ module.exports = (wagner)=>{
 
     wagner.factory('db', ()=>mongoose);
     const Product = require('./product.model');
+    const Post = require('./post.model');
     const models = {
-        Product
+        Product,
+        Post
     }
     _.each(models,(v,k)=>{
         wagner.factory(k,()=>v);

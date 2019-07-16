@@ -8,6 +8,7 @@ const PATH = require('path');
 let app = EXPRESS();
 require('./models/models')(WAGNER);
 var products = require('./routers/product.router')(WAGNER);
+var posts = require('./routers/post.router')(WAGNER);
 
 
 app.use(MORGAN('dev'));
@@ -25,4 +26,5 @@ app.use(function(req,res,next){
 //base url
 const URL_BASE = '/api/v2';
 app.use(URL_BASE+'/products',products);
+app.use(URL_BASE+'/posts',posts);
 module.exports = app;
